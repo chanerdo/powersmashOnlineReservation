@@ -10,3 +10,8 @@ C:\Users\cha\Documents\Visual Studio 2015\Projects\PowersmashOnlineReservation\P
 C:\Users\cha\Documents\Visual Studio 2015\Projects\PowersmashOnlineReservation\PowersmashOnlineReservation\obj\Debug\PowersmashOnlineReservation.exe
 C:\Users\cha\Documents\Visual Studio 2015\Projects\PowersmashOnlineReservation\PowersmashOnlineReservation\obj\Debug\PowersmashOnlineReservation.pdb
 C:\Users\cha\Documents\Visual Studio 2015\Projects\PowersmashOnlineReservation\PowersmashOnlineReservation\obj\Debug\PowersmashOnlineReservation.csprojResolveAssemblyReference.cache
+C:\Users\cha\Documents\Visual Studio 2015\Projects\PowersmashOnlineReservation\PowersmashOnlineReservation\bin\Debug\System.Net.Http.dll
+C:\Users\cha\Documents\Visual Studio 2015\Projects\PowersmashOnlineReservation\PowersmashOnlineReservation\obj\Debug\PowersmashOnlineReservation.frmMemberInfo.resources
+C:\Users\cha\Documents\Visual Studio 2015\Projects\PowersmashOnlineReservation\PowersmashOnlineReservation\obj\Debug\PowersmashOnlineReservation.frmMember.resources
+C:\Users\cha\Documents\Visual Studio 2015\Projects\PowersmashOnlineReservation\PowersmashOnlineReservation\obj\Debug\PowersmashOnlineReservation.frmNonMember.resources
+C:\Users\cha\Documents\Visual Studio 2015\Projects\PowersmashOnlineReservation\PowersmashOnlineReservation\obj\Debug\PowersmashOnlineReservation.frmNonMemberRegister.resources

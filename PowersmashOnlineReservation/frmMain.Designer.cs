@@ -242,6 +242,7 @@
             this.label194 = new System.Windows.Forms.Label();
             this.label224 = new System.Windows.Forms.Label();
             this.label195 = new System.Windows.Forms.Label();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.tlpCourt1.SuspendLayout();
             this.tlpCourt2.SuspendLayout();
             this.tlpCourt3.SuspendLayout();
@@ -3477,11 +3478,23 @@
             this.label195.Text = "Tournament";
             this.label195.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(1207, 604);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(52, 17);
+            this.linkLabel1.TabIndex = 102;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Refresh";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1271, 630);
+            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.gbxLegend);
             this.Controls.Add(this.label188);
             this.Controls.Add(this.label189);
@@ -3758,6 +3771,7 @@
         private System.Windows.Forms.Label label194;
         private System.Windows.Forms.Label label224;
         private System.Windows.Forms.Label label195;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }
 

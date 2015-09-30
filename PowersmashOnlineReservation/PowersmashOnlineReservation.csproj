@@ -9,9 +9,10 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>PowersmashOnlineReservation</RootNamespace>
     <AssemblyName>PowersmashOnlineReservation</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -48,6 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmMember.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMember.Designer.cs">
+      <DependentUpon>frmMember.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmCourtTime.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,13 +67,43 @@
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmMemberInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMemberInfo.Designer.cs">
+      <DependentUpon>frmMemberInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNonMember.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNonMember.Designer.cs">
+      <DependentUpon>frmNonMember.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNonMemberRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNonMemberRegister.Designer.cs">
+      <DependentUpon>frmNonMemberRegister.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmMember.resx">
+      <DependentUpon>frmMember.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmCourtTime.resx">
       <DependentUpon>frmCourtTime.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMemberInfo.resx">
+      <DependentUpon>frmMemberInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNonMember.resx">
+      <DependentUpon>frmNonMember.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNonMemberRegister.resx">
+      <DependentUpon>frmNonMemberRegister.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -76,6 +113,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -89,6 +127,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_profile_unknown_300x300.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

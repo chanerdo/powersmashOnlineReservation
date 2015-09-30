@@ -49,26 +49,26 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.tlpHours = new System.Windows.Forms.TableLayoutPanel();
+            this.lbl23 = new System.Windows.Forms.Label();
+            this.lbl22 = new System.Windows.Forms.Label();
+            this.lbl21 = new System.Windows.Forms.Label();
+            this.lbl20 = new System.Windows.Forms.Label();
+            this.lbl19 = new System.Windows.Forms.Label();
+            this.lbl18 = new System.Windows.Forms.Label();
+            this.lbl17 = new System.Windows.Forms.Label();
+            this.lbl16 = new System.Windows.Forms.Label();
+            this.lbl15 = new System.Windows.Forms.Label();
+            this.lbl14 = new System.Windows.Forms.Label();
+            this.lbl13 = new System.Windows.Forms.Label();
+            this.lbl12 = new System.Windows.Forms.Label();
+            this.lbl11 = new System.Windows.Forms.Label();
+            this.lbl10 = new System.Windows.Forms.Label();
+            this.lbl09 = new System.Windows.Forms.Label();
+            this.lbl08 = new System.Windows.Forms.Label();
+            this.lbl07 = new System.Windows.Forms.Label();
             this.lbl06 = new System.Windows.Forms.Label();
             this.lblCourt = new System.Windows.Forms.Label();
             this.btnOk = new System.Windows.Forms.Button();
-            this.lbl07 = new System.Windows.Forms.Label();
-            this.lbl08 = new System.Windows.Forms.Label();
-            this.lbl09 = new System.Windows.Forms.Label();
-            this.lbl10 = new System.Windows.Forms.Label();
-            this.lbl11 = new System.Windows.Forms.Label();
-            this.lbl12 = new System.Windows.Forms.Label();
-            this.lbl13 = new System.Windows.Forms.Label();
-            this.lbl14 = new System.Windows.Forms.Label();
-            this.lbl15 = new System.Windows.Forms.Label();
-            this.lbl16 = new System.Windows.Forms.Label();
-            this.lbl17 = new System.Windows.Forms.Label();
-            this.lbl18 = new System.Windows.Forms.Label();
-            this.lbl19 = new System.Windows.Forms.Label();
-            this.lbl20 = new System.Windows.Forms.Label();
-            this.lbl21 = new System.Windows.Forms.Label();
-            this.lbl22 = new System.Windows.Forms.Label();
-            this.lbl23 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.tlpHours.SuspendLayout();
             this.SuspendLayout();
@@ -331,6 +331,176 @@
             this.tlpHours.TabIndex = 0;
             this.tlpHours.MouseClick += new System.Windows.Forms.MouseEventHandler(this.tlpHours_MouseClick);
             // 
+            // lbl23
+            // 
+            this.lbl23.AutoSize = true;
+            this.lbl23.BackColor = System.Drawing.Color.Transparent;
+            this.lbl23.Location = new System.Drawing.Point(4, 1174);
+            this.lbl23.Name = "lbl23";
+            this.lbl23.Size = new System.Drawing.Size(15, 17);
+            this.lbl23.TabIndex = 20;
+            this.lbl23.Text = "0";
+            // 
+            // lbl22
+            // 
+            this.lbl22.AutoSize = true;
+            this.lbl22.BackColor = System.Drawing.Color.Transparent;
+            this.lbl22.Location = new System.Drawing.Point(4, 1105);
+            this.lbl22.Name = "lbl22";
+            this.lbl22.Size = new System.Drawing.Size(15, 17);
+            this.lbl22.TabIndex = 19;
+            this.lbl22.Text = "0";
+            // 
+            // lbl21
+            // 
+            this.lbl21.AutoSize = true;
+            this.lbl21.BackColor = System.Drawing.Color.Transparent;
+            this.lbl21.Location = new System.Drawing.Point(4, 1036);
+            this.lbl21.Name = "lbl21";
+            this.lbl21.Size = new System.Drawing.Size(15, 17);
+            this.lbl21.TabIndex = 18;
+            this.lbl21.Text = "0";
+            // 
+            // lbl20
+            // 
+            this.lbl20.AutoSize = true;
+            this.lbl20.BackColor = System.Drawing.Color.Transparent;
+            this.lbl20.Location = new System.Drawing.Point(4, 967);
+            this.lbl20.Name = "lbl20";
+            this.lbl20.Size = new System.Drawing.Size(15, 17);
+            this.lbl20.TabIndex = 17;
+            this.lbl20.Text = "0";
+            // 
+            // lbl19
+            // 
+            this.lbl19.AutoSize = true;
+            this.lbl19.BackColor = System.Drawing.Color.Transparent;
+            this.lbl19.Location = new System.Drawing.Point(4, 898);
+            this.lbl19.Name = "lbl19";
+            this.lbl19.Size = new System.Drawing.Size(15, 17);
+            this.lbl19.TabIndex = 16;
+            this.lbl19.Text = "0";
+            // 
+            // lbl18
+            // 
+            this.lbl18.AutoSize = true;
+            this.lbl18.BackColor = System.Drawing.Color.Transparent;
+            this.lbl18.Location = new System.Drawing.Point(4, 829);
+            this.lbl18.Name = "lbl18";
+            this.lbl18.Size = new System.Drawing.Size(15, 17);
+            this.lbl18.TabIndex = 15;
+            this.lbl18.Text = "0";
+            // 
+            // lbl17
+            // 
+            this.lbl17.AutoSize = true;
+            this.lbl17.BackColor = System.Drawing.Color.Transparent;
+            this.lbl17.Location = new System.Drawing.Point(4, 760);
+            this.lbl17.Name = "lbl17";
+            this.lbl17.Size = new System.Drawing.Size(15, 17);
+            this.lbl17.TabIndex = 14;
+            this.lbl17.Text = "0";
+            // 
+            // lbl16
+            // 
+            this.lbl16.AutoSize = true;
+            this.lbl16.BackColor = System.Drawing.Color.Transparent;
+            this.lbl16.Location = new System.Drawing.Point(4, 691);
+            this.lbl16.Name = "lbl16";
+            this.lbl16.Size = new System.Drawing.Size(15, 17);
+            this.lbl16.TabIndex = 13;
+            this.lbl16.Text = "0";
+            // 
+            // lbl15
+            // 
+            this.lbl15.AutoSize = true;
+            this.lbl15.BackColor = System.Drawing.Color.Transparent;
+            this.lbl15.Location = new System.Drawing.Point(4, 622);
+            this.lbl15.Name = "lbl15";
+            this.lbl15.Size = new System.Drawing.Size(15, 17);
+            this.lbl15.TabIndex = 12;
+            this.lbl15.Text = "0";
+            // 
+            // lbl14
+            // 
+            this.lbl14.AutoSize = true;
+            this.lbl14.BackColor = System.Drawing.Color.Transparent;
+            this.lbl14.Location = new System.Drawing.Point(4, 553);
+            this.lbl14.Name = "lbl14";
+            this.lbl14.Size = new System.Drawing.Size(15, 17);
+            this.lbl14.TabIndex = 11;
+            this.lbl14.Text = "0";
+            // 
+            // lbl13
+            // 
+            this.lbl13.AutoSize = true;
+            this.lbl13.BackColor = System.Drawing.Color.Transparent;
+            this.lbl13.Location = new System.Drawing.Point(4, 484);
+            this.lbl13.Name = "lbl13";
+            this.lbl13.Size = new System.Drawing.Size(15, 17);
+            this.lbl13.TabIndex = 10;
+            this.lbl13.Text = "0";
+            // 
+            // lbl12
+            // 
+            this.lbl12.AutoSize = true;
+            this.lbl12.BackColor = System.Drawing.Color.Transparent;
+            this.lbl12.Location = new System.Drawing.Point(4, 415);
+            this.lbl12.Name = "lbl12";
+            this.lbl12.Size = new System.Drawing.Size(15, 17);
+            this.lbl12.TabIndex = 9;
+            this.lbl12.Text = "0";
+            // 
+            // lbl11
+            // 
+            this.lbl11.AutoSize = true;
+            this.lbl11.BackColor = System.Drawing.Color.Transparent;
+            this.lbl11.Location = new System.Drawing.Point(4, 346);
+            this.lbl11.Name = "lbl11";
+            this.lbl11.Size = new System.Drawing.Size(15, 17);
+            this.lbl11.TabIndex = 8;
+            this.lbl11.Text = "0";
+            // 
+            // lbl10
+            // 
+            this.lbl10.AutoSize = true;
+            this.lbl10.BackColor = System.Drawing.Color.Transparent;
+            this.lbl10.Location = new System.Drawing.Point(4, 277);
+            this.lbl10.Name = "lbl10";
+            this.lbl10.Size = new System.Drawing.Size(15, 17);
+            this.lbl10.TabIndex = 7;
+            this.lbl10.Text = "0";
+            // 
+            // lbl09
+            // 
+            this.lbl09.AutoSize = true;
+            this.lbl09.BackColor = System.Drawing.Color.Transparent;
+            this.lbl09.Location = new System.Drawing.Point(4, 208);
+            this.lbl09.Name = "lbl09";
+            this.lbl09.Size = new System.Drawing.Size(15, 17);
+            this.lbl09.TabIndex = 6;
+            this.lbl09.Text = "0";
+            // 
+            // lbl08
+            // 
+            this.lbl08.AutoSize = true;
+            this.lbl08.BackColor = System.Drawing.Color.Transparent;
+            this.lbl08.Location = new System.Drawing.Point(4, 139);
+            this.lbl08.Name = "lbl08";
+            this.lbl08.Size = new System.Drawing.Size(15, 17);
+            this.lbl08.TabIndex = 5;
+            this.lbl08.Text = "0";
+            // 
+            // lbl07
+            // 
+            this.lbl07.AutoSize = true;
+            this.lbl07.BackColor = System.Drawing.Color.Transparent;
+            this.lbl07.Location = new System.Drawing.Point(4, 70);
+            this.lbl07.Name = "lbl07";
+            this.lbl07.Size = new System.Drawing.Size(15, 17);
+            this.lbl07.TabIndex = 5;
+            this.lbl07.Text = "0";
+            // 
             // lbl06
             // 
             this.lbl06.AutoSize = true;
@@ -355,188 +525,19 @@
             // 
             this.btnOk.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveBorder;
             this.btnOk.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOk.Location = new System.Drawing.Point(237, 469);
+            this.btnOk.Location = new System.Drawing.Point(255, 471);
             this.btnOk.Name = "btnOk";
-            this.btnOk.Size = new System.Drawing.Size(99, 30);
+            this.btnOk.Size = new System.Drawing.Size(98, 34);
             this.btnOk.TabIndex = 4;
             this.btnOk.Text = "OK";
             this.btnOk.UseVisualStyleBackColor = true;
-            // 
-            // lbl07
-            // 
-            this.lbl07.AutoSize = true;
-            this.lbl07.BackColor = System.Drawing.Color.Transparent;
-            this.lbl07.Location = new System.Drawing.Point(4, 70);
-            this.lbl07.Name = "lbl07";
-            this.lbl07.Size = new System.Drawing.Size(15, 17);
-            this.lbl07.TabIndex = 5;
-            this.lbl07.Text = "0";
-            // 
-            // lbl08
-            // 
-            this.lbl08.AutoSize = true;
-            this.lbl08.BackColor = System.Drawing.Color.Transparent;
-            this.lbl08.Location = new System.Drawing.Point(4, 139);
-            this.lbl08.Name = "lbl08";
-            this.lbl08.Size = new System.Drawing.Size(15, 17);
-            this.lbl08.TabIndex = 5;
-            this.lbl08.Text = "0";
-            // 
-            // lbl09
-            // 
-            this.lbl09.AutoSize = true;
-            this.lbl09.BackColor = System.Drawing.Color.Transparent;
-            this.lbl09.Location = new System.Drawing.Point(4, 208);
-            this.lbl09.Name = "lbl09";
-            this.lbl09.Size = new System.Drawing.Size(15, 17);
-            this.lbl09.TabIndex = 6;
-            this.lbl09.Text = "0";
-            // 
-            // lbl10
-            // 
-            this.lbl10.AutoSize = true;
-            this.lbl10.BackColor = System.Drawing.Color.Transparent;
-            this.lbl10.Location = new System.Drawing.Point(4, 277);
-            this.lbl10.Name = "lbl10";
-            this.lbl10.Size = new System.Drawing.Size(15, 17);
-            this.lbl10.TabIndex = 7;
-            this.lbl10.Text = "0";
-            // 
-            // lbl11
-            // 
-            this.lbl11.AutoSize = true;
-            this.lbl11.BackColor = System.Drawing.Color.Transparent;
-            this.lbl11.Location = new System.Drawing.Point(4, 346);
-            this.lbl11.Name = "lbl11";
-            this.lbl11.Size = new System.Drawing.Size(15, 17);
-            this.lbl11.TabIndex = 8;
-            this.lbl11.Text = "0";
-            // 
-            // lbl12
-            // 
-            this.lbl12.AutoSize = true;
-            this.lbl12.BackColor = System.Drawing.Color.Transparent;
-            this.lbl12.Location = new System.Drawing.Point(4, 415);
-            this.lbl12.Name = "lbl12";
-            this.lbl12.Size = new System.Drawing.Size(15, 17);
-            this.lbl12.TabIndex = 9;
-            this.lbl12.Text = "0";
-            // 
-            // lbl13
-            // 
-            this.lbl13.AutoSize = true;
-            this.lbl13.BackColor = System.Drawing.Color.Transparent;
-            this.lbl13.Location = new System.Drawing.Point(4, 484);
-            this.lbl13.Name = "lbl13";
-            this.lbl13.Size = new System.Drawing.Size(15, 17);
-            this.lbl13.TabIndex = 10;
-            this.lbl13.Text = "0";
-            // 
-            // lbl14
-            // 
-            this.lbl14.AutoSize = true;
-            this.lbl14.BackColor = System.Drawing.Color.Transparent;
-            this.lbl14.Location = new System.Drawing.Point(4, 553);
-            this.lbl14.Name = "lbl14";
-            this.lbl14.Size = new System.Drawing.Size(15, 17);
-            this.lbl14.TabIndex = 11;
-            this.lbl14.Text = "0";
-            // 
-            // lbl15
-            // 
-            this.lbl15.AutoSize = true;
-            this.lbl15.BackColor = System.Drawing.Color.Transparent;
-            this.lbl15.Location = new System.Drawing.Point(4, 622);
-            this.lbl15.Name = "lbl15";
-            this.lbl15.Size = new System.Drawing.Size(15, 17);
-            this.lbl15.TabIndex = 12;
-            this.lbl15.Text = "0";
-            // 
-            // lbl16
-            // 
-            this.lbl16.AutoSize = true;
-            this.lbl16.BackColor = System.Drawing.Color.Transparent;
-            this.lbl16.Location = new System.Drawing.Point(4, 691);
-            this.lbl16.Name = "lbl16";
-            this.lbl16.Size = new System.Drawing.Size(15, 17);
-            this.lbl16.TabIndex = 13;
-            this.lbl16.Text = "0";
-            // 
-            // lbl17
-            // 
-            this.lbl17.AutoSize = true;
-            this.lbl17.BackColor = System.Drawing.Color.Transparent;
-            this.lbl17.Location = new System.Drawing.Point(4, 760);
-            this.lbl17.Name = "lbl17";
-            this.lbl17.Size = new System.Drawing.Size(15, 17);
-            this.lbl17.TabIndex = 14;
-            this.lbl17.Text = "0";
-            // 
-            // lbl18
-            // 
-            this.lbl18.AutoSize = true;
-            this.lbl18.BackColor = System.Drawing.Color.Transparent;
-            this.lbl18.Location = new System.Drawing.Point(4, 829);
-            this.lbl18.Name = "lbl18";
-            this.lbl18.Size = new System.Drawing.Size(15, 17);
-            this.lbl18.TabIndex = 15;
-            this.lbl18.Text = "0";
-            // 
-            // lbl19
-            // 
-            this.lbl19.AutoSize = true;
-            this.lbl19.BackColor = System.Drawing.Color.Transparent;
-            this.lbl19.Location = new System.Drawing.Point(4, 898);
-            this.lbl19.Name = "lbl19";
-            this.lbl19.Size = new System.Drawing.Size(15, 17);
-            this.lbl19.TabIndex = 16;
-            this.lbl19.Text = "0";
-            // 
-            // lbl20
-            // 
-            this.lbl20.AutoSize = true;
-            this.lbl20.BackColor = System.Drawing.Color.Transparent;
-            this.lbl20.Location = new System.Drawing.Point(4, 967);
-            this.lbl20.Name = "lbl20";
-            this.lbl20.Size = new System.Drawing.Size(15, 17);
-            this.lbl20.TabIndex = 17;
-            this.lbl20.Text = "0";
-            // 
-            // lbl21
-            // 
-            this.lbl21.AutoSize = true;
-            this.lbl21.BackColor = System.Drawing.Color.Transparent;
-            this.lbl21.Location = new System.Drawing.Point(4, 1036);
-            this.lbl21.Name = "lbl21";
-            this.lbl21.Size = new System.Drawing.Size(15, 17);
-            this.lbl21.TabIndex = 18;
-            this.lbl21.Text = "0";
-            // 
-            // lbl22
-            // 
-            this.lbl22.AutoSize = true;
-            this.lbl22.BackColor = System.Drawing.Color.Transparent;
-            this.lbl22.Location = new System.Drawing.Point(4, 1105);
-            this.lbl22.Name = "lbl22";
-            this.lbl22.Size = new System.Drawing.Size(15, 17);
-            this.lbl22.TabIndex = 19;
-            this.lbl22.Text = "0";
-            // 
-            // lbl23
-            // 
-            this.lbl23.AutoSize = true;
-            this.lbl23.BackColor = System.Drawing.Color.Transparent;
-            this.lbl23.Location = new System.Drawing.Point(4, 1174);
-            this.lbl23.Name = "lbl23";
-            this.lbl23.Size = new System.Drawing.Size(15, 17);
-            this.lbl23.TabIndex = 20;
-            this.lbl23.Text = "0";
+            this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
             // 
             // frmCourtTime
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(599, 521);
+            this.ClientSize = new System.Drawing.Size(599, 517);
             this.Controls.Add(this.btnOk);
             this.Controls.Add(this.lblCourt);
             this.Controls.Add(this.panel1);
@@ -547,7 +548,8 @@
             this.MinimizeBox = false;
             this.Name = "frmCourtTime";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = " ";
+            this.Text = " Powersmash Online Reservation with Play by Play System";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmCourtTime_FormClosing);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.tlpHours.ResumeLayout(false);
