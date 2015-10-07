@@ -48,6 +48,7 @@
             this.pbxProfile = new System.Windows.Forms.PictureBox();
             this.lblName = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnTimer = new System.Windows.Forms.Button();
             this.lblTimer = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.lblPayment = new System.Windows.Forms.Label();
@@ -197,12 +198,15 @@
             // 
             // btnOK
             // 
+            this.btnOK.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.btnOK.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveBorder;
+            this.btnOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOK.Location = new System.Drawing.Point(253, 418);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(97, 34);
             this.btnOK.TabIndex = 18;
             this.btnOK.Text = "OK";
-            this.btnOK.UseVisualStyleBackColor = true;
+            this.btnOK.UseVisualStyleBackColor = false;
             this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
             // groupBox1
@@ -262,6 +266,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.btnTimer);
             this.groupBox2.Controls.Add(this.lblTimer);
             this.groupBox2.Controls.Add(this.label14);
             this.groupBox2.Controls.Add(this.lblPayment);
@@ -282,11 +287,25 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Reservation Information";
             // 
+            // btnTimer
+            // 
+            this.btnTimer.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.btnTimer.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveBorder;
+            this.btnTimer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTimer.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTimer.Location = new System.Drawing.Point(388, 106);
+            this.btnTimer.Name = "btnTimer";
+            this.btnTimer.Size = new System.Drawing.Size(96, 28);
+            this.btnTimer.TabIndex = 14;
+            this.btnTimer.Text = "Time-Out";
+            this.btnTimer.UseVisualStyleBackColor = false;
+            this.btnTimer.Click += new System.EventHandler(this.btnTimer_Click);
+            // 
             // lblTimer
             // 
             this.lblTimer.AutoSize = true;
             this.lblTimer.Font = new System.Drawing.Font("Segoe UI Semibold", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTimer.Location = new System.Drawing.Point(333, 54);
+            this.lblTimer.Location = new System.Drawing.Point(334, 38);
             this.lblTimer.Name = "lblTimer";
             this.lblTimer.Size = new System.Drawing.Size(214, 65);
             this.lblTimer.TabIndex = 13;
@@ -296,7 +315,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(411, 34);
+            this.label14.Location = new System.Drawing.Point(412, 18);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(52, 20);
             this.label14.TabIndex = 12;
@@ -464,5 +483,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblTimer;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Button btnTimer;
     }
 }

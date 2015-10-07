@@ -17,8 +17,8 @@ namespace PowersmashOnlineReservation
         private frmMain frmmain;
         private frmCourtTime frmcourt;
         private Form parent;
-        private string start_time;
-        private int court;
+        private string start_time, end_time;
+        private int court, price;
 
         public frmNonMember(frmMain m, frmCourtTime frm, Form f, string stime, int c)
         {
@@ -26,12 +26,19 @@ namespace PowersmashOnlineReservation
             frmmain = m;
             parent = f;
             start_time = stime;
+            end_time = stime;
             court = c;
             InitializeComponent();
         }
 
         private void frmNonMember_Shown(object sender, EventArgs e)
         {
+            while (!end_time.Equals("11:00 PM"))
+            {
+                DateTime answer = DateTime.Parse(end_time).Add(DateTime.Parse("1:00:00").TimeOfDay);
+                end_time = answer.ToString("hh:mm tt");
+                cbxEndTime.Items.Add(end_time);
+            }
             lblStartTime.Text = start_time + " - ";
             lblCourt.Text = court.ToString();
             cbxEndTime.SelectedIndex = 0;
@@ -50,8 +57,8 @@ namespace PowersmashOnlineReservation
             try
             {
                 if (connDB.State == ConnectionState.Open) { connDB.Close(); }
-                string query = "INSERT INTO powersmash.reservation (court_id, date, start_time, end_time, status)" +
-                             "VALUES ('" + court + "','" + DateTime.Now.ToString("yyyy-MM-dd") + "','" + DateTime.Parse(start_time).ToString("HH:mm:ss") + "','" + DateTime.Parse(cbxEndTime.Text).ToString("HH:mm:ss") + "','2')";
+                string query = "INSERT INTO powersmash.reservation (user_id, court_id, date, start_time, end_time, status)" +
+                             "VALUES ('1', '" + court + "','" + DateTime.Now.ToString("yyyy-MM-dd") + "','" + DateTime.Parse(start_time).ToString("HH:mm:ss") + "','" + DateTime.Parse(cbxEndTime.Text).ToString("HH:mm:ss") + "','2')";
                 connDB.Open();
                 MySqlCommand cmdDB = new MySqlCommand(query, connDB);
                 cmdDB.ExecuteNonQuery();
@@ -74,6 +81,13 @@ namespace PowersmashOnlineReservation
             frmcourt.Show();
             frmcourt.Activate();
             this.Dispose();
+        }
+
+        private void cbxEndTime_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            TimeSpan answer = DateTime.Parse(cbxEndTime.Text).Subtract(DateTime.Parse(start_time));
+            price = 150 * int.Parse(DateTime.Parse(answer.ToString()).ToString("HH"));
+            lblPrice.Text = "P " + price.ToString() + ".00";
         }
     }
 }

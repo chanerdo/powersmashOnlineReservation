@@ -79,11 +79,11 @@
     <Compile Include="frmNonMember.Designer.cs">
       <DependentUpon>frmNonMember.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmNonMemberRegister.cs">
+    <Compile Include="frmNonMemberInfo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmNonMemberRegister.Designer.cs">
-      <DependentUpon>frmNonMemberRegister.cs</DependentUpon>
+    <Compile Include="frmNonMemberInfo.Designer.cs">
+      <DependentUpon>frmNonMemberInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -102,8 +102,8 @@
     <EmbeddedResource Include="frmNonMember.resx">
       <DependentUpon>frmNonMember.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmNonMemberRegister.resx">
-      <DependentUpon>frmNonMemberRegister.cs</DependentUpon>
+    <EmbeddedResource Include="frmNonMemberInfo.resx">
+      <DependentUpon>frmNonMemberInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

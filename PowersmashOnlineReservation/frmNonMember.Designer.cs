@@ -65,29 +65,11 @@
             this.cbxEndTime.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxEndTime.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbxEndTime.FormattingEnabled = true;
-            this.cbxEndTime.Items.AddRange(new object[] {
-            "06:00 AM",
-            "07:00 AM",
-            "08:00 AM",
-            "09:00 AM",
-            "10:00 AM",
-            "11:00 AM",
-            "12:00 PM",
-            "01:00 PM",
-            "02:00 PM",
-            "03:00 PM",
-            "04:00 PM",
-            "05:00 PM",
-            "06:00 PM",
-            "07:00 PM",
-            "08:00 PM",
-            "09:00 PM",
-            "10:00 PM",
-            "11:00 PM"});
             this.cbxEndTime.Location = new System.Drawing.Point(192, 44);
             this.cbxEndTime.Name = "cbxEndTime";
             this.cbxEndTime.Size = new System.Drawing.Size(149, 25);
             this.cbxEndTime.TabIndex = 3;
+            this.cbxEndTime.SelectedIndexChanged += new System.EventHandler(this.cbxEndTime_SelectedIndexChanged);
             // 
             // label4
             // 

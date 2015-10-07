@@ -238,10 +238,12 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             this.label194 = new System.Windows.Forms.Label();
             this.label224 = new System.Windows.Forms.Label();
+            this.button4 = new System.Windows.Forms.Button();
             this.label195 = new System.Windows.Forms.Label();
+            this.button5 = new System.Windows.Forms.Button();
+            this.label196 = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.tlpCourt1.SuspendLayout();
             this.tlpCourt2.SuspendLayout();
@@ -920,6 +922,7 @@
             this.tlpCourt3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tlpCourt3.Size = new System.Drawing.Size(173, 135);
             this.tlpCourt3.TabIndex = 83;
+            this.tlpCourt3.Click += new System.EventHandler(this.Court3_Click);
             // 
             // label24
             // 
@@ -3346,36 +3349,39 @@
             this.gbxLegend.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.gbxLegend.Controls.Add(this.tableLayoutPanel10);
             this.gbxLegend.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbxLegend.Location = new System.Drawing.Point(356, 501);
+            this.gbxLegend.Location = new System.Drawing.Point(265, 501);
             this.gbxLegend.Name = "gbxLegend";
             this.gbxLegend.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.gbxLegend.Size = new System.Drawing.Size(540, 117);
+            this.gbxLegend.Size = new System.Drawing.Size(749, 117);
             this.gbxLegend.TabIndex = 101;
             this.gbxLegend.TabStop = false;
             this.gbxLegend.Text = "LEGEND";
             // 
             // tableLayoutPanel10
             // 
-            this.tableLayoutPanel10.ColumnCount = 4;
-            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.65598F));
-            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 24.78134F));
-            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 24.78134F));
-            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 24.4898F));
+            this.tableLayoutPanel10.ColumnCount = 5;
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel10.Controls.Add(this.label193, 0, 1);
             this.tableLayoutPanel10.Controls.Add(this.button2, 1, 0);
             this.tableLayoutPanel10.Controls.Add(this.button1, 0, 0);
             this.tableLayoutPanel10.Controls.Add(this.button3, 2, 0);
-            this.tableLayoutPanel10.Controls.Add(this.button4, 3, 0);
             this.tableLayoutPanel10.Controls.Add(this.label194, 1, 1);
             this.tableLayoutPanel10.Controls.Add(this.label224, 0, 1);
+            this.tableLayoutPanel10.Controls.Add(this.button4, 3, 0);
             this.tableLayoutPanel10.Controls.Add(this.label195, 3, 1);
+            this.tableLayoutPanel10.Controls.Add(this.button5, 4, 0);
+            this.tableLayoutPanel10.Controls.Add(this.label196, 4, 1);
             this.tableLayoutPanel10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel10.Location = new System.Drawing.Point(3, 21);
             this.tableLayoutPanel10.Name = "tableLayoutPanel10";
             this.tableLayoutPanel10.RowCount = 2;
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 74.10714F));
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.89286F));
-            this.tableLayoutPanel10.Size = new System.Drawing.Size(534, 93);
+            this.tableLayoutPanel10.Size = new System.Drawing.Size(743, 93);
             this.tableLayoutPanel10.TabIndex = 0;
             // 
             // label193
@@ -3383,9 +3389,9 @@
             this.label193.AutoSize = true;
             this.label193.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label193.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label193.Location = new System.Drawing.Point(140, 68);
+            this.label193.Location = new System.Drawing.Point(3, 68);
             this.label193.Name = "label193";
-            this.label193.Size = new System.Drawing.Size(126, 25);
+            this.label193.Size = new System.Drawing.Size(142, 25);
             this.label193.TabIndex = 7;
             this.label193.Text = "Reserve";
             this.label193.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -3397,9 +3403,9 @@
             this.button2.Enabled = false;
             this.button2.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveBorder;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(140, 3);
+            this.button2.Location = new System.Drawing.Point(151, 3);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(126, 62);
+            this.button2.Size = new System.Drawing.Size(142, 62);
             this.button2.TabIndex = 4;
             this.button2.UseVisualStyleBackColor = false;
             // 
@@ -3412,7 +3418,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Location = new System.Drawing.Point(3, 3);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(131, 62);
+            this.button1.Size = new System.Drawing.Size(142, 62);
             this.button1.TabIndex = 3;
             this.button1.UseVisualStyleBackColor = false;
             // 
@@ -3423,33 +3429,20 @@
             this.button3.Enabled = false;
             this.button3.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveBorder;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(272, 3);
+            this.button3.Location = new System.Drawing.Point(299, 3);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(126, 62);
+            this.button3.Size = new System.Drawing.Size(142, 62);
             this.button3.TabIndex = 5;
             this.button3.UseVisualStyleBackColor = false;
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.Gold;
-            this.button4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button4.Enabled = false;
-            this.button4.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveBorder;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Location = new System.Drawing.Point(404, 3);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(127, 62);
-            this.button4.TabIndex = 9;
-            this.button4.UseVisualStyleBackColor = false;
             // 
             // label194
             // 
             this.label194.AutoSize = true;
             this.label194.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label194.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label194.Location = new System.Drawing.Point(272, 68);
+            this.label194.Location = new System.Drawing.Point(299, 68);
             this.label194.Name = "label194";
-            this.label194.Size = new System.Drawing.Size(126, 25);
+            this.label194.Size = new System.Drawing.Size(142, 25);
             this.label194.TabIndex = 8;
             this.label194.Text = "Vacant";
             this.label194.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -3459,24 +3452,62 @@
             this.label224.AutoSize = true;
             this.label224.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label224.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label224.Location = new System.Drawing.Point(3, 68);
+            this.label224.Location = new System.Drawing.Point(151, 68);
             this.label224.Name = "label224";
-            this.label224.Size = new System.Drawing.Size(131, 25);
+            this.label224.Size = new System.Drawing.Size(142, 25);
             this.label224.TabIndex = 10;
             this.label224.Text = "Occupied";
             this.label224.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.Gold;
+            this.button4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button4.Enabled = false;
+            this.button4.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveBorder;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Location = new System.Drawing.Point(447, 3);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(142, 62);
+            this.button4.TabIndex = 9;
+            this.button4.UseVisualStyleBackColor = false;
             // 
             // label195
             // 
             this.label195.AutoSize = true;
             this.label195.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label195.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label195.Location = new System.Drawing.Point(404, 68);
+            this.label195.Location = new System.Drawing.Point(447, 68);
             this.label195.Name = "label195";
-            this.label195.Size = new System.Drawing.Size(127, 25);
+            this.label195.Size = new System.Drawing.Size(142, 25);
             this.label195.TabIndex = 6;
             this.label195.Text = "Tournament";
             this.label195.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.Black;
+            this.button5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button5.Enabled = false;
+            this.button5.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveBorder;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Location = new System.Drawing.Point(595, 3);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(145, 62);
+            this.button5.TabIndex = 11;
+            this.button5.UseVisualStyleBackColor = false;
+            // 
+            // label196
+            // 
+            this.label196.AutoSize = true;
+            this.label196.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label196.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label196.Location = new System.Drawing.Point(595, 68);
+            this.label196.Name = "label196";
+            this.label196.Size = new System.Drawing.Size(145, 25);
+            this.label196.TabIndex = 12;
+            this.label196.Text = "Time-Out";
+            this.label196.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // linkLabel1
             // 
@@ -3772,6 +3803,8 @@
         private System.Windows.Forms.Label label224;
         private System.Windows.Forms.Label label195;
         private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Label label196;
     }
 }
 

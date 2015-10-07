@@ -9,9 +9,9 @@ using System.Windows.Forms;
 
 namespace PowersmashOnlineReservation
 {
-    public partial class frmNonMemberRegister : Form
+    public partial class frmNonMemberInfo : Form
     {
-        public frmNonMemberRegister()
+        public frmNonMemberInfo()
         {
             InitializeComponent();
         }

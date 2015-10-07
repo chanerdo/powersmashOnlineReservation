@@ -15,7 +15,6 @@ namespace PowersmashOnlineReservation
     {
 
         private MySqlConnection connDB = new MySqlConnection("datasource=unicsoftworks.com;port=3306;username=admin;password=powersmash123;Convert Zero Datetime=true;");
-        //private MySqlConnection connDB = new MySqlConnection("datasource=localhost;port=3306;username=root;password=;");
         private DataTable reserve_data;
 
         public frmMain()
@@ -97,7 +96,7 @@ namespace PowersmashOnlineReservation
                 string date = row.Field<DateTime>(4).ToString("yyyy-MM-dd");
                 int start_time = int.Parse(DateTime.Parse(row.Field<TimeSpan>(5).ToString()).ToString("HH"));
                 int end_time = int.Parse(DateTime.Parse(row.Field<TimeSpan>(6).ToString()).ToString("HH"));
-                int status = row.Field<int>(8);
+                int status = row.Field<int>(9);
                 if (date.Equals(dtpDate.Text))
                 {
                     if (court == court_id)
