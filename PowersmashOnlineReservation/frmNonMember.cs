@@ -18,7 +18,7 @@ namespace PowersmashOnlineReservation
         private frmCourtTime frmcourt;
         private Form parent;
         private string start_time, end_time;
-        private int court, price;
+        private int court, price, id;
 
         public frmNonMember(frmMain m, frmCourtTime frm, Form f, string stime, int c)
         {
@@ -52,13 +52,53 @@ namespace PowersmashOnlineReservation
             this.Dispose();
         }
 
-        private void btnOk_Click(object sender, EventArgs e)
+        private void saveReference()
         {
             try
             {
                 if (connDB.State == ConnectionState.Open) { connDB.Close(); }
-                string query = "INSERT INTO powersmash.reservation (user_id, court_id, date, start_time, end_time, status)" +
-                             "VALUES ('1', '" + court + "','" + DateTime.Now.ToString("yyyy-MM-dd") + "','" + DateTime.Parse(start_time).ToString("HH:mm:ss") + "','" + DateTime.Parse(cbxEndTime.Text).ToString("HH:mm:ss") + "','2')";
+                connDB.Open();
+                MySqlCommand cmdDB = new MySqlCommand("INSERT INTO powersmash.reference (approve, reference_no, amt) VALUES ('1', 'WALK-IN', '" + price.ToString() + "')", connDB);
+                cmdDB.ExecuteNonQuery();
+            }
+            catch (MySqlException ex) { MessageBox.Show(ex.Message); }
+            finally
+            {
+                connDB.Close();
+            }
+        }
+
+        private void getLastReference()
+        {
+            try
+            {
+                if (connDB.State == ConnectionState.Open) { connDB.Close(); }
+                connDB.Open();
+                MySqlCommand cmdDB = new MySqlCommand("SELECT * FROM powersmash.reference", connDB);
+                MySqlDataReader reader = cmdDB.ExecuteReader();
+                while (reader.Read())
+                {
+                    id = int.Parse(reader.GetString("id"));
+                }
+            }
+            catch (MySqlException ex) { MessageBox.Show(ex.Message); }
+            finally
+            {
+                connDB.Close();
+            }
+        }
+
+        private void btnOk_Click(object sender, EventArgs e)
+        {
+            saveReference();
+            getLastReference();
+            try
+            {
+                if (connDB.State == ConnectionState.Open) { connDB.Close(); }
+                string query = "INSERT INTO powersmash.reservation (user_id, court_id, date, reference_id, start_time, end_time, status, walkin_name, created_at)" +
+                               "VALUES ('1', '" + court + "','" + DateTime.Now.ToString("yyyy-MM-dd") + "', (SELECT id FROM powersmash.reference WHERE id = '" + id.ToString() + 
+                               "'), '" + DateTime.Parse(start_time).ToString("HH:mm:ss") + "','" + DateTime.Parse(cbxEndTime.Text).ToString("HH:mm:ss") + "','2','" + tbxName.Text + 
+                               "','" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + "')";
                 connDB.Open();
                 MySqlCommand cmdDB = new MySqlCommand(query, connDB);
                 cmdDB.ExecuteNonQuery();

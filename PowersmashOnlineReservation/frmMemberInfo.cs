@@ -17,7 +17,7 @@ namespace PowersmashOnlineReservation
         private MySqlConnection connDB = new MySqlConnection("datasource=unicsoftworks.com;port=3306;username=admin;password=powersmash123;Convert Zero Datetime=true;");
         private frmCourtTime frmcourt;
         private Form parent;
-        private DataTable user_data, reserve_data;
+        private DataTable user_data, reserve_data, reference_data;
         private Timer court_timer = new Timer();
         private int reserve_id, status;
         private string start_time, end_time;
@@ -32,7 +32,9 @@ namespace PowersmashOnlineReservation
 
         private void frmMemberInfo_Load(object sender, EventArgs e)
         {
-
+            getReserveData();
+            getUserData();
+            getReferenceData();
         }
 
         private void frmMemberInfo_FormClosing(object sender, FormClosingEventArgs e)
@@ -44,8 +46,6 @@ namespace PowersmashOnlineReservation
 
         private void frmMemberInfo_Shown(object sender, EventArgs e)
         {
-            getReserveData();
-            getUserData();
             foreach (DataRow reserve_row in reserve_data.Rows)
             {
                 if (reserve_row.Field<int>(0) == reserve_id)
@@ -54,7 +54,7 @@ namespace PowersmashOnlineReservation
                     int rowcount = 0;
                     foreach (DataRow user_row in user_data.Rows)
                     {
-                        if (user_row.Field<int>(0) == 1) { }
+                        if (user_row.Field<int>(0) == 1) { lblName.Text = reserve_row.Field<string>(9); }
                         else
                         {
                             int id = user_row.Field<int>(0);
@@ -67,10 +67,10 @@ namespace PowersmashOnlineReservation
                             string address = user_row.Field<string>(43);
                             if (user_data.Rows[rowcount][42].ToString().Equals(""))
                             {
-                                if (reserve_row.Field<int>(0) == id)
+                                if (reserve_row.Field<int>(1) == id)
                                 {
                                     lblID.Text = id.ToString();
-                                    lblName.Text = firstname;
+                                    lblName.Text = firstname + " " + lastname;
                                     lblGender.Text = gender;
                                     lblBirth.Text = dateofbirth;
                                     lblContact.Text = contactnum;
@@ -81,7 +81,7 @@ namespace PowersmashOnlineReservation
                             else
                             {
                                 image = (byte[])(user_row.Field<byte[]>(42));
-                                if (reserve_row.Field<int>(0) == id)
+                                if (reserve_row.Field<int>(1) == id)
                                 {
                                     MemoryStream memstream = new MemoryStream(image);
                                     pbxProfile.Image = Image.FromStream(memstream);
@@ -97,11 +97,19 @@ namespace PowersmashOnlineReservation
                         }
                     }
                     lblCourt.Text = reserve_row.Field<int>(2).ToString();
+                    lblReference.Text = reserve_row.Field<int>(3).ToString();
                     lblDate.Text = reserve_row.Field<DateTime>(4).ToString("yyyy-MM-dd");
                     lblTime.Text = reserve_row.Field<TimeSpan>(5).ToString() + " - " + reserve_row.Field<TimeSpan>(6).ToString();
+                    foreach (DataRow reference_row in reference_data.Rows)
+                    {
+                        if (reference_row.Field<int>(0) == reserve_row.Field<int>(3))
+                        {
+                            lblPayment.Text = "P " + reference_row.Field<int>(3).ToString() + ".00";
+                        }
+                    }
                     start_time = reserve_row.Field<TimeSpan>(5).ToString();
                     end_time = reserve_row.Field<TimeSpan>(6).ToString();
-                    status = reserve_row.Field<int>(9);
+                    status = reserve_row.Field<int>(8);
                     if (status == 1)
                     {
                         btnTimer.Text = "Time-In";
@@ -216,6 +224,27 @@ namespace PowersmashOnlineReservation
                 MySqlDataAdapter sqlDataAdapter = new MySqlDataAdapter(cmdDB);
                 user_data = new DataTable();
                 sqlDataAdapter.Fill(user_data);
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                connDB.Close();
+            }
+        }
+
+        public void getReferenceData()
+        {
+            try
+            {
+                if (connDB.State == ConnectionState.Open) { connDB.Close(); }
+                connDB.Open();
+                MySqlCommand cmdDB = new MySqlCommand("SELECT * FROM powersmash.reference", connDB);
+                MySqlDataAdapter sqlDataAdapter = new MySqlDataAdapter(cmdDB);
+                reference_data = new DataTable();
+                sqlDataAdapter.Fill(reference_data);
             }
             catch (MySqlException ex)
             {

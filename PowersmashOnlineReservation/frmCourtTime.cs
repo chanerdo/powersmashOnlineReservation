@@ -47,7 +47,7 @@ namespace PowersmashOnlineReservation
                 string date = row.Field<DateTime>(4).ToString("yyyy-MM-dd");
                 int start_time = int.Parse(DateTime.Parse(row.Field<TimeSpan>(5).ToString()).ToString("HH"));
                 int end_time = int.Parse(DateTime.Parse(row.Field<TimeSpan>(6).ToString()).ToString("HH"));
-                int status = row.Field<int>(9);
+                int status = row.Field<int>(8);
                 if (datereserve.Equals(date))
                 {
                     if (court == court_id)
@@ -262,7 +262,7 @@ namespace PowersmashOnlineReservation
                     //show add
                     if (MessageBox.Show("are you a member?", "member", MessageBoxButtons.YesNo) == DialogResult.Yes)
                     {
-                        frmMember addmember = new frmMember(frmmain, this, this, 06);
+                        frmMember addmember = new frmMember(frmmain, this, this, DateTime.Parse("06:00:00").ToString("hh:mm tt"), court);
                         addmember.Show();
                         this.Hide();
                     }
@@ -288,7 +288,7 @@ namespace PowersmashOnlineReservation
                     //show add
                     if (MessageBox.Show("are you a member?", "member", MessageBoxButtons.YesNo) == DialogResult.Yes)
                     {
-                        frmMember addmember = new frmMember(frmmain, this, this, 07);
+                        frmMember addmember = new frmMember(frmmain, this, this, DateTime.Parse("07:00:00").ToString("hh:mm tt"), court);
                         addmember.Show();
                         this.Hide();
                     }
@@ -314,7 +314,7 @@ namespace PowersmashOnlineReservation
                     //show add
                     if (MessageBox.Show("are you a member?", "member", MessageBoxButtons.YesNo) == DialogResult.Yes)
                     {
-                        frmMember addmember = new frmMember(frmmain, this, this, 08);
+                        frmMember addmember = new frmMember(frmmain, this, this, DateTime.Parse("08:00:00").ToString("hh:mm tt"), court);
                         addmember.Show();
                         this.Hide();
                     }
@@ -340,7 +340,7 @@ namespace PowersmashOnlineReservation
                     //show add
                     if (MessageBox.Show("are you a member?", "member", MessageBoxButtons.YesNo) == DialogResult.Yes)
                     {
-                        frmMember addmember = new frmMember(frmmain, this, this, 09);
+                        frmMember addmember = new frmMember(frmmain, this, this, DateTime.Parse("09:00:00").ToString("hh:mm tt"), court);
                         addmember.Show();
                         this.Hide();
                     }
@@ -366,7 +366,7 @@ namespace PowersmashOnlineReservation
                     //show add
                     if (MessageBox.Show("are you a member?", "member", MessageBoxButtons.YesNo) == DialogResult.Yes)
                     {
-                        frmMember addmember = new frmMember(frmmain, this, this, 10);
+                        frmMember addmember = new frmMember(frmmain, this, this, DateTime.Parse("10:00:00").ToString("hh:mm tt"), court);
                         addmember.Show();
                         this.Hide();
                     }
@@ -392,7 +392,7 @@ namespace PowersmashOnlineReservation
                     //show add
                     if (MessageBox.Show("are you a member?", "member", MessageBoxButtons.YesNo) == DialogResult.Yes)
                     {
-                        frmMember addmember = new frmMember(frmmain, this, this, 11);
+                        frmMember addmember = new frmMember(frmmain, this, this, DateTime.Parse("11:00:00").ToString("hh:mm tt"), court);
                         addmember.Show();
                         this.Hide();
                     }
@@ -418,7 +418,7 @@ namespace PowersmashOnlineReservation
                     //show add
                     if (MessageBox.Show("are you a member?", "member", MessageBoxButtons.YesNo) == DialogResult.Yes)
                     {
-                        frmMember addmember = new frmMember(frmmain, this, this, 12);
+                        frmMember addmember = new frmMember(frmmain, this, this, DateTime.Parse("12:00:00").ToString("hh:mm tt"), court);
                         addmember.Show();
                         this.Hide();
                     }
@@ -444,7 +444,7 @@ namespace PowersmashOnlineReservation
                     //show add
                     if (MessageBox.Show("are you a member?", "member", MessageBoxButtons.YesNo) == DialogResult.Yes)
                     {
-                        frmMember addmember = new frmMember(frmmain, this, this, 13);
+                        frmMember addmember = new frmMember(frmmain, this, this, DateTime.Parse("13:00:00").ToString("hh:mm tt"), court);
                         addmember.Show();
                         this.Hide();
                     }
@@ -470,7 +470,7 @@ namespace PowersmashOnlineReservation
                     //show add
                     if (MessageBox.Show("are you a member?", "member", MessageBoxButtons.YesNo) == DialogResult.Yes)
                     {
-                        frmMember addmember = new frmMember(frmmain, this, this, 14);
+                        frmMember addmember = new frmMember(frmmain, this, this, DateTime.Parse("14:00:00").ToString("hh:mm tt"), court);
                         addmember.Show();
                         this.Hide();
                     }
@@ -496,7 +496,7 @@ namespace PowersmashOnlineReservation
                     //show add
                     if (MessageBox.Show("are you a member?", "member", MessageBoxButtons.YesNo) == DialogResult.Yes)
                     {
-                        frmMember addmember = new frmMember(frmmain, this, this, 15);
+                        frmMember addmember = new frmMember(frmmain, this, this, DateTime.Parse("15:00:00").ToString("hh:mm tt"), court);
                         addmember.Show();
                         this.Hide();
                     }
@@ -522,7 +522,7 @@ namespace PowersmashOnlineReservation
                     //show add
                     if (MessageBox.Show("are you a member?", "member", MessageBoxButtons.YesNo) == DialogResult.Yes)
                     {
-                        frmMember addmember = new frmMember(frmmain, this, this, 16);
+                        frmMember addmember = new frmMember(frmmain, this, this, DateTime.Parse("16:00:00").ToString("hh:mm tt"), court);
                         addmember.Show();
                         this.Hide();
                     }
@@ -548,7 +548,7 @@ namespace PowersmashOnlineReservation
                     //show add
                     if (MessageBox.Show("are you a member?", "member", MessageBoxButtons.YesNo) == DialogResult.Yes)
                     {
-                        frmMember addmember = new frmMember(frmmain, this, this, 17);
+                        frmMember addmember = new frmMember(frmmain, this, this, DateTime.Parse("17:00:00").ToString("hh:mm tt"), court);
                         addmember.Show();
                         this.Hide();
                     }
@@ -574,7 +574,7 @@ namespace PowersmashOnlineReservation
                     //show add
                     if (MessageBox.Show("are you a member?", "member", MessageBoxButtons.YesNo) == DialogResult.Yes)
                     {
-                        frmMember addmember = new frmMember(frmmain, this, this, 18);
+                        frmMember addmember = new frmMember(frmmain, this, this, DateTime.Parse("18:00:00").ToString("hh:mm tt"), court);
                         addmember.Show();
                         this.Hide();
                     }
@@ -600,7 +600,7 @@ namespace PowersmashOnlineReservation
                     //show add
                     if (MessageBox.Show("are you a member?", "member", MessageBoxButtons.YesNo) == DialogResult.Yes)
                     {
-                        frmMember addmember = new frmMember(frmmain, this, this, 19);
+                        frmMember addmember = new frmMember(frmmain, this, this, DateTime.Parse("19:00:00").ToString("hh:mm tt"), court);
                         addmember.Show();
                         this.Hide();
                     }
@@ -626,7 +626,7 @@ namespace PowersmashOnlineReservation
                     //show add
                     if (MessageBox.Show("are you a member?", "member", MessageBoxButtons.YesNo) == DialogResult.Yes)
                     {
-                        frmMember addmember = new frmMember(frmmain, this, this, 20);
+                        frmMember addmember = new frmMember(frmmain, this, this, DateTime.Parse("20:00:00").ToString("hh:mm tt"), court);
                         addmember.Show();
                         this.Hide();
                     }
@@ -652,7 +652,7 @@ namespace PowersmashOnlineReservation
                     //show add
                     if (MessageBox.Show("are you a member?", "member", MessageBoxButtons.YesNo) == DialogResult.Yes)
                     {
-                        frmMember addmember = new frmMember(frmmain, this, this, 21);
+                        frmMember addmember = new frmMember(frmmain, this, this, DateTime.Parse("21:00:00").ToString("hh:mm tt"), court);
                         addmember.Show();
                         this.Hide();
                     }
@@ -678,7 +678,7 @@ namespace PowersmashOnlineReservation
                     //show add
                     if (MessageBox.Show("are you a member?", "member", MessageBoxButtons.YesNo) == DialogResult.Yes)
                     {
-                        frmMember addmember = new frmMember(frmmain, this, this, 22);
+                        frmMember addmember = new frmMember(frmmain, this, this, DateTime.Parse("22:00:00").ToString("hh:mm tt"), court);
                         addmember.Show();
                         this.Hide();
                     }
@@ -704,7 +704,7 @@ namespace PowersmashOnlineReservation
                     //show add
                     if (MessageBox.Show("are you a member?", "member", MessageBoxButtons.YesNo) == DialogResult.Yes)
                     {
-                        frmMember addmember = new frmMember(frmmain, this, this, 23);
+                        frmMember addmember = new frmMember(frmmain, this, this, DateTime.Parse("23:00:00").ToString("hh:mm tt"), court);
                         addmember.Show();
                         this.Hide();
                     }

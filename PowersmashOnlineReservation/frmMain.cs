@@ -15,7 +15,9 @@ namespace PowersmashOnlineReservation
     {
 
         private MySqlConnection connDB = new MySqlConnection("datasource=unicsoftworks.com;port=3306;username=admin;password=powersmash123;Convert Zero Datetime=true;");
-        private DataTable reserve_data;
+        private DataTable reserve_data, court1_data;
+        private Timer court_timer, court1_timer;
+        private string start_time, end_time;
 
         public frmMain()
         {
@@ -51,7 +53,9 @@ namespace PowersmashOnlineReservation
                 MySqlCommand cmdDB = new MySqlCommand(query, connDB);
                 MySqlDataAdapter sqlDataAdapter = new MySqlDataAdapter(cmdDB);
                 reserve_data = new DataTable();
+                //court1_data = new DataTable();
                 sqlDataAdapter.Fill(reserve_data);
+               // sqlDataAdapter.Fill(court1_data);
             }
             catch (MySqlException ex)
             {
@@ -96,7 +100,7 @@ namespace PowersmashOnlineReservation
                 string date = row.Field<DateTime>(4).ToString("yyyy-MM-dd");
                 int start_time = int.Parse(DateTime.Parse(row.Field<TimeSpan>(5).ToString()).ToString("HH"));
                 int end_time = int.Parse(DateTime.Parse(row.Field<TimeSpan>(6).ToString()).ToString("HH"));
-                int status = row.Field<int>(9);
+                int status = row.Field<int>(8);
                 if (date.Equals(dtpDate.Text))
                 {
                     if (court == court_id)
@@ -415,6 +419,7 @@ namespace PowersmashOnlineReservation
             tlpCourt9.Invalidate();
             tlpCourt10.CellPaint += new TableLayoutCellPaintEventHandler(tlpCourt10_CellPaint);
             tlpCourt10.Invalidate();
+            //court1();
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -443,5 +448,45 @@ namespace PowersmashOnlineReservation
             tlpCourt10.CellPaint += new TableLayoutCellPaintEventHandler(tlpCourt10_CellPaint);
             tlpCourt10.Invalidate();
         }
+
+       /* private void court1()
+        { 
+            int rowcount = 0;
+            court1_data = new DataTable();
+            foreach (DataRow reserve_row in reserve_data.Rows)
+            {
+                if (reserve_row.Field<DateTime>(4).ToString("yyyy-MM-dd").Equals(dtpDate.Text))
+                {
+                    if (reserve_row.Field<int>(2) == 1)
+                    {
+                        MessageBox.Show(reserve_row.Field<int>(0).ToString() + "\n" + reserve_row.Field<DateTime>(4).ToString("yyyy-MM-dd") + "\n" + dtpDate.Text);
+                        court1_data.ImportRow(reserve_row);
+                    }
+                }
+                rowcount++;
+            }
+            foreach (DataRow row in court1_data.Rows)
+            {
+                MessageBox.Show(row.Field<int>(0).ToString());
+            }
+            MessageBox.Show(court1_data.Rows.Count.ToString());
+        }
+
+        private void noshowTimer_Tick(object sender, EventArgs e)
+        {
+            DateTime answer = DateTime.Parse(start_time).Add(DateTime.Parse("00:30:00").TimeOfDay);
+            TimeSpan totalTime = DateTime.Parse(answer.ToString("hh:mm tt")).Subtract(DateTime.Parse(DateTime.Now.AddHours(-0).ToString("hh:mm:ss tt")));
+            int compareTime = DateTime.Compare(DateTime.Parse(answer.ToString("hh:mm tt")), DateTime.Parse(DateTime.Now.AddHours(-0).ToString("hh:mm tt")));
+            if (compareTime == 1) { }
+            else
+            {
+                court_timer.Stop();
+            }
+        }
+
+        private void endcourtTimer_Tick(object sender, EventArgs e)
+        {
+            TimeSpan totalTime = DateTime.Parse(end_time).Subtract(DateTime.Parse(DateTime.Now.AddHours(-0).ToString("hh:mm:ss tt")));
+        }*/
     }
 }

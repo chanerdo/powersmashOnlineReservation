@@ -132,9 +132,8 @@
             this.lblID.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblID.Location = new System.Drawing.Point(155, 21);
             this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(20, 17);
+            this.lblID.Size = new System.Drawing.Size(0, 17);
             this.lblID.TabIndex = 9;
-            this.lblID.Text = "ID";
             // 
             // label9
             // 
@@ -152,9 +151,8 @@
             this.lblGender.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblGender.Location = new System.Drawing.Point(155, 75);
             this.lblGender.Name = "lblGender";
-            this.lblGender.Size = new System.Drawing.Size(46, 17);
+            this.lblGender.Size = new System.Drawing.Size(0, 17);
             this.lblGender.TabIndex = 13;
-            this.lblGender.Text = "gender";
             // 
             // lblBirth
             // 
@@ -162,9 +160,8 @@
             this.lblBirth.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBirth.Location = new System.Drawing.Point(155, 101);
             this.lblBirth.Name = "lblBirth";
-            this.lblBirth.Size = new System.Drawing.Size(34, 17);
+            this.lblBirth.Size = new System.Drawing.Size(0, 17);
             this.lblBirth.TabIndex = 14;
-            this.lblBirth.Text = "birth";
             // 
             // lblContact
             // 
@@ -172,9 +169,8 @@
             this.lblContact.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblContact.Location = new System.Drawing.Point(155, 127);
             this.lblContact.Name = "lblContact";
-            this.lblContact.Size = new System.Drawing.Size(51, 17);
+            this.lblContact.Size = new System.Drawing.Size(0, 17);
             this.lblContact.TabIndex = 15;
-            this.lblContact.Text = "number";
             // 
             // lblEmail
             // 
@@ -182,9 +178,8 @@
             this.lblEmail.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmail.Location = new System.Drawing.Point(155, 154);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(38, 17);
+            this.lblEmail.Size = new System.Drawing.Size(0, 17);
             this.lblEmail.TabIndex = 16;
-            this.lblEmail.Text = "email";
             // 
             // lblAddress
             // 
@@ -192,9 +187,8 @@
             this.lblAddress.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAddress.Location = new System.Drawing.Point(155, 180);
             this.lblAddress.Name = "lblAddress";
-            this.lblAddress.Size = new System.Drawing.Size(50, 17);
+            this.lblAddress.Size = new System.Drawing.Size(0, 17);
             this.lblAddress.TabIndex = 17;
-            this.lblAddress.Text = "address";
             // 
             // btnOK
             // 
@@ -260,9 +254,8 @@
             this.lblName.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblName.Location = new System.Drawing.Point(155, 47);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(39, 17);
+            this.lblName.Size = new System.Drawing.Size(0, 17);
             this.lblName.TabIndex = 11;
-            this.lblName.Text = "name";
             // 
             // groupBox2
             // 

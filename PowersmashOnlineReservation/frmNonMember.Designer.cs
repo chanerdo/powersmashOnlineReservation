@@ -39,12 +39,14 @@
             this.label8 = new System.Windows.Forms.Label();
             this.btnOk = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.tbxName = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(73, 47);
+            this.label2.Location = new System.Drawing.Point(49, 84);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(39, 17);
             this.label2.TabIndex = 1;
@@ -53,7 +55,7 @@
             // lblStartTime
             // 
             this.lblStartTime.AutoSize = true;
-            this.lblStartTime.Location = new System.Drawing.Point(122, 47);
+            this.lblStartTime.Location = new System.Drawing.Point(98, 86);
             this.lblStartTime.Name = "lblStartTime";
             this.lblStartTime.Size = new System.Drawing.Size(68, 17);
             this.lblStartTime.TabIndex = 2;
@@ -65,16 +67,16 @@
             this.cbxEndTime.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxEndTime.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbxEndTime.FormattingEnabled = true;
-            this.cbxEndTime.Location = new System.Drawing.Point(192, 44);
+            this.cbxEndTime.Location = new System.Drawing.Point(172, 83);
             this.cbxEndTime.Name = "cbxEndTime";
-            this.cbxEndTime.Size = new System.Drawing.Size(149, 25);
+            this.cbxEndTime.Size = new System.Drawing.Size(189, 25);
             this.cbxEndTime.TabIndex = 3;
             this.cbxEndTime.SelectedIndexChanged += new System.EventHandler(this.cbxEndTime_SelectedIndexChanged);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(73, 109);
+            this.label4.Location = new System.Drawing.Point(49, 137);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(60, 17);
             this.label4.TabIndex = 5;
@@ -83,7 +85,7 @@
             // lblPrice
             // 
             this.lblPrice.AutoSize = true;
-            this.lblPrice.Location = new System.Drawing.Point(140, 109);
+            this.lblPrice.Location = new System.Drawing.Point(116, 137);
             this.lblPrice.Name = "lblPrice";
             this.lblPrice.Size = new System.Drawing.Size(57, 17);
             this.lblPrice.TabIndex = 6;
@@ -92,7 +94,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(73, 82);
+            this.label6.Location = new System.Drawing.Point(49, 110);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(43, 17);
             this.label6.TabIndex = 7;
@@ -101,7 +103,7 @@
             // lblCourt
             // 
             this.lblCourt.AutoSize = true;
-            this.lblCourt.Location = new System.Drawing.Point(123, 83);
+            this.lblCourt.Location = new System.Drawing.Point(99, 111);
             this.lblCourt.Name = "lblCourt";
             this.lblCourt.Size = new System.Drawing.Size(22, 17);
             this.lblCourt.TabIndex = 8;
@@ -122,7 +124,7 @@
             this.btnOk.BackColor = System.Drawing.SystemColors.ControlLight;
             this.btnOk.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveBorder;
             this.btnOk.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOk.Location = new System.Drawing.Point(89, 142);
+            this.btnOk.Location = new System.Drawing.Point(92, 166);
             this.btnOk.Name = "btnOk";
             this.btnOk.Size = new System.Drawing.Size(74, 32);
             this.btnOk.TabIndex = 10;
@@ -135,7 +137,7 @@
             this.btnCancel.BackColor = System.Drawing.SystemColors.ControlLight;
             this.btnCancel.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveBorder;
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancel.Location = new System.Drawing.Point(222, 142);
+            this.btnCancel.Location = new System.Drawing.Point(225, 166);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(74, 32);
             this.btnCancel.TabIndex = 11;
@@ -143,12 +145,30 @@
             this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(49, 55);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(46, 17);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "Name:";
+            // 
+            // tbxName
+            // 
+            this.tbxName.Location = new System.Drawing.Point(101, 52);
+            this.tbxName.Name = "tbxName";
+            this.tbxName.Size = new System.Drawing.Size(260, 25);
+            this.tbxName.TabIndex = 13;
+            // 
             // frmNonMember
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(393, 183);
+            this.ClientSize = new System.Drawing.Size(408, 217);
+            this.Controls.Add(this.tbxName);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnOk);
             this.Controls.Add(this.label8);
@@ -186,5 +206,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button btnOk;
         private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox tbxName;
     }
 }

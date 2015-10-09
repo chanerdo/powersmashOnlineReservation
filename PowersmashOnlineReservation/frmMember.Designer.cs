@@ -42,9 +42,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.pbxProfile = new System.Windows.Forms.PictureBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.cbxCourt = new System.Windows.Forms.ComboBox();
-            this.cbxDuration = new System.Windows.Forms.ComboBox();
-            this.cbxStartTime = new System.Windows.Forms.ComboBox();
+            this.lblStartTime = new System.Windows.Forms.Label();
+            this.cbxEndTime = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -53,6 +52,7 @@
             this.btnSave = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
+            this.lblCourt = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMember)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxProfile)).BeginInit();
@@ -61,11 +61,17 @@
             // 
             // dgvMember
             // 
+            this.dgvMember.AllowUserToAddRows = false;
+            this.dgvMember.AllowUserToDeleteRows = false;
+            this.dgvMember.AllowUserToResizeRows = false;
             this.dgvMember.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMember.Location = new System.Drawing.Point(452, 74);
             this.dgvMember.Name = "dgvMember";
+            this.dgvMember.RowHeadersVisible = false;
+            this.dgvMember.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvMember.Size = new System.Drawing.Size(363, 334);
             this.dgvMember.TabIndex = 3;
+            this.dgvMember.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMember_CellContentClick);
             // 
             // label1
             // 
@@ -117,9 +123,9 @@
             this.lblContact.AutoSize = true;
             this.lblContact.Location = new System.Drawing.Point(134, 94);
             this.lblContact.Name = "lblContact";
-            this.lblContact.Size = new System.Drawing.Size(85, 17);
+            this.lblContact.Size = new System.Drawing.Size(64, 17);
             this.lblContact.TabIndex = 6;
-            this.lblContact.Text = "09152004702";
+            this.lblContact.Text = "00000000";
             // 
             // lblGender
             // 
@@ -181,9 +187,9 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.cbxCourt);
-            this.groupBox2.Controls.Add(this.cbxDuration);
-            this.groupBox2.Controls.Add(this.cbxStartTime);
+            this.groupBox2.Controls.Add(this.lblCourt);
+            this.groupBox2.Controls.Add(this.lblStartTime);
+            this.groupBox2.Controls.Add(this.cbxEndTime);
             this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.label7);
@@ -195,35 +201,30 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Usage Details";
             // 
-            // cbxCourt
+            // lblStartTime
             // 
-            this.cbxCourt.FormattingEnabled = true;
-            this.cbxCourt.Location = new System.Drawing.Point(94, 87);
-            this.cbxCourt.Name = "cbxCourt";
-            this.cbxCourt.Size = new System.Drawing.Size(303, 25);
-            this.cbxCourt.TabIndex = 6;
+            this.lblStartTime.AutoSize = true;
+            this.lblStartTime.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStartTime.Location = new System.Drawing.Point(94, 57);
+            this.lblStartTime.Name = "lblStartTime";
+            this.lblStartTime.Size = new System.Drawing.Size(51, 17);
+            this.lblStartTime.TabIndex = 7;
+            this.lblStartTime.Text = "00:00 tt";
             // 
-            // cbxDuration
+            // cbxEndTime
             // 
-            this.cbxDuration.FormattingEnabled = true;
-            this.cbxDuration.Location = new System.Drawing.Point(94, 56);
-            this.cbxDuration.Name = "cbxDuration";
-            this.cbxDuration.Size = new System.Drawing.Size(303, 25);
-            this.cbxDuration.TabIndex = 5;
-            // 
-            // cbxStartTime
-            // 
-            this.cbxStartTime.FormattingEnabled = true;
-            this.cbxStartTime.Location = new System.Drawing.Point(94, 22);
-            this.cbxStartTime.Name = "cbxStartTime";
-            this.cbxStartTime.Size = new System.Drawing.Size(303, 25);
-            this.cbxStartTime.TabIndex = 4;
+            this.cbxEndTime.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxEndTime.FormattingEnabled = true;
+            this.cbxEndTime.Location = new System.Drawing.Point(97, 81);
+            this.cbxEndTime.Name = "cbxEndTime";
+            this.cbxEndTime.Size = new System.Drawing.Size(303, 25);
+            this.cbxEndTime.TabIndex = 5;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(15, 90);
+            this.label9.Location = new System.Drawing.Point(15, 31);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(45, 17);
             this.label9.TabIndex = 2;
@@ -233,17 +234,17 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(15, 59);
+            this.label8.Location = new System.Drawing.Point(15, 84);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(64, 17);
+            this.label8.Size = new System.Drawing.Size(67, 17);
             this.label8.TabIndex = 1;
-            this.label8.Text = "Duration:";
+            this.label8.Text = "End Time:";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(15, 25);
+            this.label7.Location = new System.Drawing.Point(15, 57);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(73, 17);
             this.label7.TabIndex = 0;
@@ -304,6 +305,16 @@
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
+            // lblCourt
+            // 
+            this.lblCourt.AutoSize = true;
+            this.lblCourt.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCourt.Location = new System.Drawing.Point(94, 31);
+            this.lblCourt.Name = "lblCourt";
+            this.lblCourt.Size = new System.Drawing.Size(53, 17);
+            this.lblCourt.TabIndex = 8;
+            this.lblCourt.Text = "number";
+            // 
             // frmMember
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -329,6 +340,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Powersmash Online Reservation with Play by Play System";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmAdd_FormClosing);
+            this.Shown += new System.EventHandler(this.frmMember_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMember)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -355,9 +367,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.ComboBox cbxCourt;
-        private System.Windows.Forms.ComboBox cbxDuration;
-        private System.Windows.Forms.ComboBox cbxStartTime;
+        private System.Windows.Forms.ComboBox cbxEndTime;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
@@ -366,5 +376,7 @@
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Label lblStartTime;
+        private System.Windows.Forms.Label lblCourt;
     }
 }
