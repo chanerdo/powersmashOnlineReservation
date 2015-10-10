@@ -108,9 +108,17 @@ namespace PowersmashOnlineReservation
             finally
             {
                 connDB.Close();
+            }
+
+            if (MessageBox.Show("Do you want receipt?", "RECEIPT", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                print_dialog.ShowDialog();
+            }
+            else
+            {
                 frmmain.Activate();
-                frmcourt.Show();
-                frmcourt.Activate();
+                frmcourt.Dispose();
+                frmmain.refreshData();
                 this.Dispose();
             }
         }
@@ -128,6 +136,33 @@ namespace PowersmashOnlineReservation
             TimeSpan answer = DateTime.Parse(cbxEndTime.Text).Subtract(DateTime.Parse(start_time));
             price = 150 * int.Parse(DateTime.Parse(answer.ToString()).ToString("HH"));
             lblPrice.Text = "P " + price.ToString() + ".00";
+        }
+
+        private void print_dialog_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            frmmain.Activate();
+            frmmain.Enabled = true;
+            frmcourt.Dispose();
+            frmmain.refreshData();
+            this.Dispose();
+        }
+
+        private void print_doc_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            e.Graphics.DrawString("Powersmash Badminton Gym", new Font("Times New Roman", 24, FontStyle.Bold), Brushes.Black, 250, 40);
+            e.Graphics.DrawString("2270 Chino Roces Avenue, Makati City", new Font("Times New Roman", 12, FontStyle.Italic), Brushes.Black, 320, 70);
+            e.Graphics.DrawString("Contact: (02) 892 8024", new Font("Times New Roman", 12), Brushes.Black, 380, 85);
+            e.Graphics.DrawString("Website: www.unicsoftworks.com", new Font("Times New Roman", 12), Brushes.Black, 340, 100);
+            e.Graphics.DrawString("Cash Reciept", new Font("Times New Roman", 25, FontStyle.Bold), Brushes.Black, 350, 130);
+            e.Graphics.DrawString("Reference #:", new Font("Times New Roman", 12, FontStyle.Bold), Brushes.Black, 150, 200);
+            e.Graphics.DrawString("Date:", new Font("Times New Roman", 12, FontStyle.Bold), Brushes.Black, 600, 200);
+            e.Graphics.DrawString("Cash Recieved From_____________________________________ of Php_____________________________", new Font("Times New Roman", 12, FontStyle.Bold), Brushes.Black, 50, 250);
+            e.Graphics.DrawString(tbxName.Text, new Font("Times New Roman", 12, FontStyle.Bold), Brushes.Black, 300, 250);
+            e.Graphics.DrawString(price.ToString(), new Font("Times New Roman", 12, FontStyle.Bold), Brushes.Black, 650, 250);
+            e.Graphics.DrawString("For Transaction_________________________", new Font("Times New Roman", 12, FontStyle.Bold), Brushes.Black, 50, 300);
+            e.Graphics.DrawString("Walk-In Payment", new Font("Times New Roman", 12, FontStyle.Bold), Brushes.Black, 200, 299);
+            e.Graphics.DrawString("________________________________", new Font("Times New Roman", 12, FontStyle.Bold), Brushes.Black, 500, 350);
+            e.Graphics.DrawString("Signature Over Printed Name", new Font("Times New Roman", 12, FontStyle.Bold), Brushes.Black, 525, 370);
         }
     }
 }

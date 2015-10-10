@@ -41,6 +41,8 @@
             this.btnCancel = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.tbxName = new System.Windows.Forms.TextBox();
+            this.print_doc = new System.Drawing.Printing.PrintDocument();
+            this.print_dialog = new System.Windows.Forms.PrintPreviewDialog();
             this.SuspendLayout();
             // 
             // label2
@@ -161,6 +163,22 @@
             this.tbxName.Size = new System.Drawing.Size(260, 25);
             this.tbxName.TabIndex = 13;
             // 
+            // print_doc
+            // 
+            this.print_doc.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.print_doc_PrintPage);
+            // 
+            // print_dialog
+            // 
+            this.print_dialog.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.print_dialog.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.print_dialog.ClientSize = new System.Drawing.Size(400, 300);
+            this.print_dialog.Document = this.print_doc;
+            this.print_dialog.Enabled = true;
+            this.print_dialog.Icon = ((System.Drawing.Icon)(resources.GetObject("print_dialog.Icon")));
+            this.print_dialog.Name = "print_dialog";
+            this.print_dialog.Visible = false;
+            this.print_dialog.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.print_dialog_FormClosing);
+            // 
             // frmNonMember
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -208,5 +226,7 @@
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox tbxName;
+        private System.Drawing.Printing.PrintDocument print_doc;
+        private System.Windows.Forms.PrintPreviewDialog print_dialog;
     }
 }

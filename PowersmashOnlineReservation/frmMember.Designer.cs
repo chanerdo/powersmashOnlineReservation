@@ -42,17 +42,21 @@
             this.label4 = new System.Windows.Forms.Label();
             this.pbxProfile = new System.Windows.Forms.PictureBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.lblCourt = new System.Windows.Forms.Label();
             this.lblStartTime = new System.Windows.Forms.Label();
             this.cbxEndTime = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.cbxSearchBy = new System.Windows.Forms.ComboBox();
-            this.cbxSearch = new System.Windows.Forms.ComboBox();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
-            this.lblCourt = new System.Windows.Forms.Label();
+            this.tbxSearch = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.lblPrice = new System.Windows.Forms.Label();
+            this.print_doc = new System.Drawing.Printing.PrintDocument();
+            this.print_dialog = new System.Windows.Forms.PrintPreviewDialog();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMember)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxProfile)).BeginInit();
@@ -69,7 +73,7 @@
             this.dgvMember.Name = "dgvMember";
             this.dgvMember.RowHeadersVisible = false;
             this.dgvMember.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvMember.Size = new System.Drawing.Size(363, 334);
+            this.dgvMember.Size = new System.Drawing.Size(363, 353);
             this.dgvMember.TabIndex = 3;
             this.dgvMember.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMember_CellContentClick);
             // 
@@ -187,6 +191,8 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.lblPrice);
+            this.groupBox2.Controls.Add(this.label10);
             this.groupBox2.Controls.Add(this.lblCourt);
             this.groupBox2.Controls.Add(this.lblStartTime);
             this.groupBox2.Controls.Add(this.cbxEndTime);
@@ -196,10 +202,20 @@
             this.groupBox2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(19, 285);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(415, 123);
+            this.groupBox2.Size = new System.Drawing.Size(415, 142);
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Usage Details";
+            // 
+            // lblCourt
+            // 
+            this.lblCourt.AutoSize = true;
+            this.lblCourt.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCourt.Location = new System.Drawing.Point(94, 31);
+            this.lblCourt.Name = "lblCourt";
+            this.lblCourt.Size = new System.Drawing.Size(53, 17);
+            this.lblCourt.TabIndex = 8;
+            this.lblCourt.Text = "number";
             // 
             // lblStartTime
             // 
@@ -213,12 +229,16 @@
             // 
             // cbxEndTime
             // 
+            this.cbxEndTime.BackColor = System.Drawing.SystemColors.Control;
+            this.cbxEndTime.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxEndTime.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbxEndTime.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxEndTime.FormattingEnabled = true;
             this.cbxEndTime.Location = new System.Drawing.Point(97, 81);
             this.cbxEndTime.Name = "cbxEndTime";
             this.cbxEndTime.Size = new System.Drawing.Size(303, 25);
             this.cbxEndTime.TabIndex = 5;
+            this.cbxEndTime.SelectedIndexChanged += new System.EventHandler(this.cbxEndTime_SelectedIndexChanged);
             // 
             // label9
             // 
@@ -252,26 +272,24 @@
             // 
             // cbxSearchBy
             // 
+            this.cbxSearchBy.BackColor = System.Drawing.SystemColors.Control;
+            this.cbxSearchBy.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxSearchBy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbxSearchBy.FormattingEnabled = true;
+            this.cbxSearchBy.Items.AddRange(new object[] {
+            "First Name",
+            "Last Name"});
             this.cbxSearchBy.Location = new System.Drawing.Point(89, 71);
             this.cbxSearchBy.Name = "cbxSearchBy";
             this.cbxSearchBy.Size = new System.Drawing.Size(345, 25);
             this.cbxSearchBy.TabIndex = 1;
-            // 
-            // cbxSearch
-            // 
-            this.cbxSearch.FormattingEnabled = true;
-            this.cbxSearch.Location = new System.Drawing.Point(89, 103);
-            this.cbxSearch.Name = "cbxSearch";
-            this.cbxSearch.Size = new System.Drawing.Size(345, 25);
-            this.cbxSearch.TabIndex = 2;
             // 
             // btnSave
             // 
             this.btnSave.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveBorder;
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSave.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.Location = new System.Drawing.Point(207, 425);
+            this.btnSave.Location = new System.Drawing.Point(207, 433);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(98, 34);
             this.btnSave.TabIndex = 7;
@@ -284,7 +302,7 @@
             this.btnClear.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveBorder;
             this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClear.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClear.Location = new System.Drawing.Point(363, 425);
+            this.btnClear.Location = new System.Drawing.Point(363, 433);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(98, 34);
             this.btnClear.TabIndex = 8;
@@ -297,7 +315,7 @@
             this.btnCancel.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveBorder;
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.Location = new System.Drawing.Point(515, 425);
+            this.btnCancel.Location = new System.Drawing.Point(515, 433);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(98, 34);
             this.btnCancel.TabIndex = 9;
@@ -305,25 +323,58 @@
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
-            // lblCourt
+            // tbxSearch
             // 
-            this.lblCourt.AutoSize = true;
-            this.lblCourt.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCourt.Location = new System.Drawing.Point(94, 31);
-            this.lblCourt.Name = "lblCourt";
-            this.lblCourt.Size = new System.Drawing.Size(53, 17);
-            this.lblCourt.TabIndex = 8;
-            this.lblCourt.Text = "number";
+            this.tbxSearch.Location = new System.Drawing.Point(89, 103);
+            this.tbxSearch.Name = "tbxSearch";
+            this.tbxSearch.Size = new System.Drawing.Size(345, 25);
+            this.tbxSearch.TabIndex = 10;
+            this.tbxSearch.TextChanged += new System.EventHandler(this.tbxSearch_TextChanged);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(16, 110);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(65, 17);
+            this.label10.TabIndex = 9;
+            this.label10.Text = "Payment:";
+            // 
+            // lblPrice
+            // 
+            this.lblPrice.AutoSize = true;
+            this.lblPrice.Location = new System.Drawing.Point(94, 110);
+            this.lblPrice.Name = "lblPrice";
+            this.lblPrice.Size = new System.Drawing.Size(64, 17);
+            this.lblPrice.TabIndex = 10;
+            this.lblPrice.Text = "Php 00.00";
+            // 
+            // print_doc
+            // 
+            this.print_doc.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.print_doc_PrintPage);
+            // 
+            // print_dialog
+            // 
+            this.print_dialog.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.print_dialog.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.print_dialog.ClientSize = new System.Drawing.Size(400, 300);
+            this.print_dialog.Document = this.print_doc;
+            this.print_dialog.Enabled = true;
+            this.print_dialog.Icon = ((System.Drawing.Icon)(resources.GetObject("print_dialog.Icon")));
+            this.print_dialog.Name = "print_dialog";
+            this.print_dialog.Visible = false;
+            this.print_dialog.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.print_dialog_FormClosing);
             // 
             // frmMember
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(827, 475);
+            this.Controls.Add(this.tbxSearch);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnSave);
-            this.Controls.Add(this.cbxSearch);
             this.Controls.Add(this.cbxSearchBy);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -340,6 +391,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Powersmash Online Reservation with Play by Play System";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmAdd_FormClosing);
+            this.Load += new System.EventHandler(this.frmMember_Load);
             this.Shown += new System.EventHandler(this.frmMember_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMember)).EndInit();
             this.groupBox1.ResumeLayout(false);
@@ -372,11 +424,15 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox cbxSearchBy;
-        private System.Windows.Forms.ComboBox cbxSearch;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Label lblStartTime;
         private System.Windows.Forms.Label lblCourt;
+        private System.Windows.Forms.TextBox tbxSearch;
+        private System.Windows.Forms.Label lblPrice;
+        private System.Windows.Forms.Label label10;
+        private System.Drawing.Printing.PrintDocument print_doc;
+        private System.Windows.Forms.PrintPreviewDialog print_dialog;
     }
 }

@@ -422,7 +422,7 @@ namespace PowersmashOnlineReservation
             //court1();
         }
 
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        public void refreshData()
         {
             string query = "SELECT * FROM powersmash.reservation";
             getData(query);
@@ -447,6 +447,11 @@ namespace PowersmashOnlineReservation
             tlpCourt9.Invalidate();
             tlpCourt10.CellPaint += new TableLayoutCellPaintEventHandler(tlpCourt10_CellPaint);
             tlpCourt10.Invalidate();
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            refreshData();
         }
 
        /* private void court1()
